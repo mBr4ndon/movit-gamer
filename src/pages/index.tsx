@@ -7,6 +7,7 @@ import { XpBar } from '../components/XpBar'
 import { ChallengeBox } from '../components/ChallengeBox'
 
 import styles from '../styles/pages/Home.module.css'
+import { CountdownProvider } from '../contexts/CountdownContext'
 
 
 export default function Home() {
@@ -18,19 +19,20 @@ export default function Home() {
 
       <XpBar/>
 
-      <section>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
+      <CountdownProvider>
+        <section>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />           
+          </div>
           
-        </div>
-        
-        <div>
-          <ChallengeBox />
-        </div>
+          <div>
+            <ChallengeBox />
+          </div>
 
-      </section>
+        </section>
+      </CountdownProvider>
     </div>
   )
 }
