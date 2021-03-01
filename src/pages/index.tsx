@@ -1,38 +1,26 @@
-import Head from 'next/head'
+import styles from '../styles/pages/Login.module.css'
+import { FaGithub, FaArrowRight } from 'react-icons/fa'
+import Link from 'next/link'
 
-import { CompletedChallenges } from '../components/CompletedChallenges'
-import { Countdown } from '../components/Countdown'
-import { Profile } from '../components/Profile'
-import { XpBar } from '../components/XpBar'
-import { ChallengeBox } from '../components/ChallengeBox'
+export default function Login() {
+  return(
+    <div className={styles.loginContainer}>
 
-import styles from '../styles/pages/Home.module.css'
-import { CountdownProvider } from '../contexts/CountdownContext'
+      <div className={styles.formContainer}>
+        <img src="/icons/moveit-white.svg" alt="Move it logo"/>
 
+        <h1>Welcome</h1>
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Start | Moveit Gamer</title>
-      </Head>
-
-      <XpBar/>
-
-      <CountdownProvider>
-        <section>
-          <div>
-            <Profile />
-            <CompletedChallenges />
-            <Countdown />           
-          </div>
-          
-          <div>
-            <ChallengeBox />
-          </div>
-
-        </section>
-      </CountdownProvider>
+        <div className={styles.githubDoLogin}>
+          <FaGithub />
+          <input type="text" placeholder="Login with GitHub" disabled/>
+          <Link href="https://github.com/login/oauth/authorize?client_id=27f548125f8978de4f46">
+            <button type="button">
+              <FaArrowRight />
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

@@ -17,3 +17,14 @@
   gap: 6.25rem;
   align-content: center;
 }
+
+@media (max-width: 620px) {
+  .container section { 
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 90%);
+    gap: 6.25rem;
+    align-content: center;
+  } 
+}

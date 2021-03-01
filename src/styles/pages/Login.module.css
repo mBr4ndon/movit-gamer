@@ -1,0 +1,81 @@
+.loginContainer {
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--blue) url('/icons/biglogo.svg') no-repeat;
+}
+.formContainer {
+  width: 50vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  right: 0;
+}
+.formContainer > img {
+  width: 270px;
+  height: auto;
+
+  margin-bottom: 6rem;
+}
+
+.formContainer > h1 {
+  color: var(--white);
+  margin-bottom: 2.5rem;
+}
+.githubDoLogin {
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+}
+
+.githubDoLogin > svg{
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  margin: 10px;
+}
+.githubDoLogin > input{
+  height: 50px;
+  width: 300px;
+
+  font-size: 1.25rem;
+  padding-left: 3rem;
+
+  color: var(--white);
+
+  background: linear-gradient(90deg, #4953B8 0%, rgba(73, 83, 184, 0.2) 100%);
+  border-radius: 5px 0px 0px 5px;
+  border: 0;
+  box-shadow: 0;
+  outline: 0;
+}
+
+.githubDoLogin > input::placeholder {
+  color: var(--text-highlight);
+}
+
+.githubDoLogin > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  background: var(--green);
+  color: var(--white);
+  border: 0;
+  box-shadow: 0;
+  outline: 0;
+
+}
+
+.githubDoLogin > button:hover {
+  opacity: 0.7;
+}
